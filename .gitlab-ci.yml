@@ -1,0 +1,44 @@
+
+stages:
+  - build
+  - test
+  - deploy
+
+before_script:
+  - export GRADLE_USER_HOME=`pwd`/.gradle
+
+build critter:
+  stage: build
+  cache:
+    paths:
+      - .gradle/wrapper
+      - .gradle/caches
+  artifacts:
+    paths:
+      - build/libs
+  tags:
+    - critter
+  script:
+    - ./gradlew assemble
+
+test critter:
+  stage: test
+  tags:
+    - critter
+  script:
+    - ./gradlew check
+
+deploy critter:
+  stage: deploy
+  only:
+    refs:
+      - main
+  tags:
+    - critter
+  script:
+    - mkdir -p ~/api-deployment # mkdir make folder api-deployment ~/ is under current user directory so for gitlab it would be /home/gitlab/api-deployment
+    - rm -rf ~/api-deployment/* # rm remove -rf is recursive files from api-deployment
+    - cp -r build/libs/. ~/api-deployment # cp - copy build/libs is where #- sudo service critter restart  # this requires sudo rights for gitlab user
+    - docker-compose -f ~/docker-compose.yml down
+    - docker-compose -f ~/docker-compose.yml up -d
+    - sudo service java-critter restart

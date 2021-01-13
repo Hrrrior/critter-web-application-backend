@@ -1,0 +1,68 @@
+server:
+  servlet:
+    context-path: /api
+
+spring:
+  profiles:
+    active: "h2"
+
+management:
+  endpoints:
+    jmx:
+      exposure:
+        include: "*"
+    web:
+      exposure:
+        include: "*"
+  security:
+    enabled: false
+---
+
+spring:
+  profiles: h2
+  jackson:
+    default-property-inclusion: non_null
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.H2Dialect
+        temp:
+          use_jdbc_metadata_defaults: false
+    hibernate:
+      ddl-auto: create
+  datasource:
+    #    url: jdbc:h2:mem:db;DB_CLOSE_DELAY=-1 # this one is in memory
+    url: jdbc:h2:./h2/games;AUTO_SERVER=TRUE # this one is on the disk, notice the h2 folder and contents it creates
+    driverClassName: org.h2.Driver
+    username: sa
+    password: sa
+  h2:
+    console:
+      #      this enables http://localhost:8080/h2-console
+      enabled: true
+logging:
+  file:
+    name: logs/dev
+    path: .SS
+jwt:
+  secret: secret
+  durationMin: 10080
+---
+
+spring:
+  profiles: postgres
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+  datasource:
+    url: jdbc:postgresql://localhost:5632/postgres
+    username: postgres
+    password: postgres
+logging:
+  file:
+    name: postgres
+    path: /logs/postgres
+jwt:
+  secret: secret
+  durationMin: 10080

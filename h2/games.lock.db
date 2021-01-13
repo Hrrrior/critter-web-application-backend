@@ -1,0 +1,6 @@
+#FileLock
+#Wed Jan 13 12:47:10 EET 2021
+server=192.168.56.1\:58483
+hostName=CyanCotton
+method=file
+id=176fb5b283f2f66ba2b86b052c795870e7cba799d43

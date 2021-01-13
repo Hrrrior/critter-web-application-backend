@@ -1,0 +1,18 @@
+2020-09-21 22:27:47 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION VARCHAR(255)": "'Part of the Final Fantasy turn-based Japanese RPG franchise, Final Fantasy VI follows an ensemble cast of characters as they at... (410)"; SQL statement:
+insert into game (description, developer, img_url, name, rating, release_date, id) values (?, ?, ?, ?, ?, ?, ?) [22001-200]
+2020-09-21 22:29:35 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION VARCHAR(255)": "'Persona 3 Portable is an enhanced remake of Persona 3 for the PlayStation Portable. The game features an option to play as a fe... (478)"; SQL statement:
+insert into game (description, developer, img_url, name, rating, release_date, id) values (?, ?, ?, ?, ?, ?, ?) [22001-200]
+2020-09-21 22:30:51 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION VARCHAR(255)": "STRINGDECODE('\""Carve your own clever path to vengeance in an all-new adventure from developer FromSoftware. \n \nExplore late 1... (500)"; SQL statement:
+insert into game (description, developer, img_url, name, rating, release_date, id) values (?, ?, ?, ?, ?, ?, ?) [22001-200]
+2020-09-21 22:32:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION VARCHAR(255)": "STRINGDECODE('Resident Evil Revelations 2 follows two interwoven stories of terror across 4 episodes of intense survival horror.... (446)"; SQL statement:
+insert into game (description, developer, img_url, name, rating, release_date, id) values (?, ?, ?, ?, ?, ?, ?) [22001-200]
+2020-09-21 22:51:18 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT * FROM GAME GAME_GENRES GAME_PLATFORMS[*]"; SQL statement:
+SELECT * FROM GAME GAME_GENRES GAME_PLATFORMS [42000-200]
+2020-10-03 17:22:58 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "GAME[*]"; expected "GRANT"; SQL statement:
+GAME [42001-200]

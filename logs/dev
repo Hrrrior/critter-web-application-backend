@@ -1,0 +1,31 @@
+2021-01-13 12:46:56.734  INFO 7080 --- [main] ee.taltech.critter.CritterApplication    : Starting CritterApplication on CyanCotton with PID 7080 (C:\Users\Henri\IdeaProjects\critter-web-application-backend\build\classes\java\main started by Henri in C:\Users\Henri\IdeaProjects\critter-web-application-backend)
+2021-01-13 12:46:56.796  INFO 7080 --- [main] ee.taltech.critter.CritterApplication    : The following profiles are active: h2
+2021-01-13 12:46:59.757  INFO 7080 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2021-01-13 12:47:00.021  INFO 7080 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 240ms. Found 5 JPA repository interfaces.
+2021-01-13 12:47:00.701  INFO 7080 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@6d6bff89' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-01-13 12:47:00.712  INFO 7080 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-01-13 12:47:01.279  INFO 7080 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-01-13 12:47:01.292  INFO 7080 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-01-13 12:47:01.293  INFO 7080 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2021-01-13 12:47:01.598  INFO 7080 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2021-01-13 12:47:01.599  INFO 7080 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4546 ms
+2021-01-13 12:47:01.849  INFO 7080 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-01-13 12:47:10.891  INFO 7080 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-01-13 12:47:10.906  INFO 7080 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:./h2/games'
+2021-01-13 12:47:11.209  INFO 7080 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-01-13 12:47:11.309  INFO 7080 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-01-13 12:47:11.469  INFO 7080 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.20.Final
+2021-01-13 12:47:11.799  WARN 7080 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-01-13 12:47:11.855  INFO 7080 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2021-01-13 12:47:12.130  INFO 7080 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-01-13 12:47:12.799  INFO 7080 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+2021-01-13 12:47:13.103  INFO 7080 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@23e86863, org.springframework.security.web.context.SecurityContextPersistenceFilter@50d666a2, org.springframework.security.web.header.HeaderWriterFilter@6338afe2, org.springframework.security.web.authentication.logout.LogoutFilter@4ce18cec, ee.taltech.critter.security.JwtRequestFilter@5835e24a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1859e55c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3c65f00e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6df87ffd, org.springframework.security.web.session.SessionManagementFilter@718ad3a6, org.springframework.security.web.access.ExceptionTranslationFilter@7921a37d, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1013871e]
+2021-01-13 12:47:13.693  INFO 7080 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-01-13 12:47:13.708  INFO 7080 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-01-13 12:47:13.935  INFO 7080 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/api'
+2021-01-13 12:47:14.467  INFO 7080 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2021-01-13 12:47:15.099  INFO 7080 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2021-01-13 12:47:15.126  INFO 7080 --- [main] ee.taltech.critter.CritterApplication    : Started CritterApplication in 20.184 seconds (JVM running for 21.823)
+2021-01-13 12:52:33.842  INFO 7080 --- [http-nio-8080-exec-7] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-01-13 12:52:33.843  INFO 7080 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-01-13 12:52:33.865  INFO 7080 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed initialization in 22 ms
